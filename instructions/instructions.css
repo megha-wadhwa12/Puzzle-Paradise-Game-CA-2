@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+body{
+    background-color: black;
+}
+
+.bg{
+    position: absolute;
+    z-index: -1;
+    opacity: 45%;
+}
+
+.bg>img{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-space-between{
+    justify-content: space-between;
+}
+
+.align-items{
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.small-logo>img{
+    width: 6vw;
+    margin: 2vh 0 0 2.5vh;
+}
+
+.settings>img{
+    width: 4vw;
+    margin: 2vh 2.5vh 0 0;
+}
+
+.content{
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+    /* background-color: rgb(180, 206, 175); */
+    background: rgba(245, 245, 245, 0.70);
+    /* mix-blend-mode: luminosity; */
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
+
+
+.content>h1{
+    color: #0e555b;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 20px 0 0 0;
+}
+
+.instructions>li{
+    position: relative;
+    margin: 13px 5px 3px 50px ;
+    text-align: justify;
+    color: #257D5D;
+    font-weight: 600;
+}
+
+.content>ul{
+    height: 30vh;
+    margin: 20px 20px 0 0 ;
+
+}

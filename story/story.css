@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.bg > img {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.small-logo > img {
+  width: 6vw;
+  margin: 2vh 0 0 2.5vh;
+}
+
+.settings > img {
+  width: 4vw;
+  margin: 2vh 2.5vh 0 0;
+}
+
+.captain > img {
+  width: 20vh;
+}
+
+.circles>div {
+  border-radius: 725px;
+  background: #d9d9d9;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 1rem 0 0;
+  background-image: url('../assets/plain-black-background.png');
+
+}
+
+.c1{
+    width: 5vh;
+    height: 4.5vh;
+}
+.c2{
+    width: 8vh;
+    height: 7.5vh;
+    margin: 0 0 4rem 0;
+}
+
+.c3{
+    width: 60vh;
+    height: 58vh;
+    border-radius: 100px;
+    margin: 0 5rem 0 0;
+    padding: 3rem;
+
+}
+
+.c3>img{
+    width: 60vh;
+}
+.circles > .c3> p {
+  color: #12e9fb;
+  text-align: center;
+  display: flex ;
+  align-items: end;
+  font-family: Kaushan Script;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.circles{
+    width: 100vw;
+    height: 45vh;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
