@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Jolly+Lodger&family=Kavoon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.bg > img {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-logo > img {
+  width: 6vw;
+  margin: 2vh 0 0 2.5vh;
+}
+
+.settings > img {
+  width: 4vw;
+  margin: 2vh 2.5vh 0 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.gameover > p {
+  position: relative;
+  font-family: "Kavoon", serif;
+  color: #07f6f6;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 10px 4px 10px rgba(0, 0, 0, 0.35);
+  -webkit-text-stroke: 3.5px #0a5157;
+}
+
+.box {
+  margin: 2vh;
+  background-color: #0a5157;
+  width: 38vw;
+  height: 42vh;
+  border-radius: 4vh;
+}
+
+.main {
+  gap: 10vh;
+}
+
+svg {
+  margin: 2vh;
+}
+
+.messagebox {
+  color: #fff;
+  text-align: center;
+  font-family: Kavoon;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.score,
+.score > span {
+  color: #d1c913;
+  font-family: Kavoon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.play-again {
+  border-radius: 10px;
+  background: #0cff3a;
+  mix-blend-mode: luminosity;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  margin: 2vh;
+
+}
+
+.play-again>p{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 1.4vh;
+}
+
+.golden{
+    position: absolute;
+}

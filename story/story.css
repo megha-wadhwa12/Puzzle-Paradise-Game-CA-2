@@ -52,17 +52,23 @@ body {
   margin: 2vh 2.5vh 0 0;
 }
 
+.captain{
+  justify-content: center;
+  align-items: flex-end;
+}
 .captain > img {
-  width: 20vh;
+  height: 38vh;
 }
 
 .circles>div {
-  border-radius: 725px;
+  border-radius: 50%;
   background: #d9d9d9;
   justify-content: flex-end;
   align-items: flex-end;
   margin: 0 1rem 0 0;
   background-image: url('../assets/plain-black-background.png');
+  border: none;
+
 
 }
 
@@ -73,13 +79,14 @@ body {
 .c2{
     width: 8vh;
     height: 7.5vh;
-    margin: 0 0 4rem 0;
+    margin: 0 010px 0;
+
 }
 
 .c3{
     width: 60vh;
     height: 58vh;
-    border-radius: 100px;
+      /* border-radius: 10px; */
     margin: 0 5rem 0 0;
     padding: 3rem;
 
@@ -99,11 +106,35 @@ body {
 }
 
 .circles{
-    width: 100vw;
-    height: 45vh;
-    border-radius: 50px;
+    width: 80vw;
+    height: 50vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end ;
 
+}
+
+.captain>img {
+  /* width: 100px;
+  height: 100px; */
+  /* background-color: #3498db; */
+  /* border-radius: 50%; Makes it a circle */
+  animation: moveCaptain 2s linear ease-out;
+} 
+
+@keyframes moveCaptain {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.captain{
+  width: 70vw;
+  height: 30vh;
 }
