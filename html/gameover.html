@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameOver-Page</title>
-    <link rel="stylesheet" href="./gameover.css">
-    <script src="./gameover.js"></script>
+    <link rel="stylesheet" href="../css/gameover.css">
 </head>
 <body>
     <div class="bg">
@@ -51,11 +50,12 @@
                         </svg>
                     </div>
                 </div>
-                <div class="messagebox">You're a puzzle-solving champion</div>
-                <div class="score">Your score: <span>500</span> Points</div>
+                <div class="messagebox"><span id="input"></span><span id="messages">, You're a puzzle-solving champion</span></div>
+                <div class="score">Your score: <span id="score">500</span> Points</div>
                 <button class="play-again"><p>PLAY AGAIN</p></button>
 
             </div>
         </div>
 </body>
+<script src="../javascript/gameover.js"></script>
 </html>

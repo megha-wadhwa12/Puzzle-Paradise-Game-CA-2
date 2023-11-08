@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Information-Page</title>
-    <link rel="stylesheet" href="./information.css" />
-    <script src="./information.js"></script>
+    <link rel="stylesheet" href="../css/information.css" />
   </head>
   <body>
     <div class="bg">
       <img src="../assets/information background.png" alt="" />
     </div>
     <div class="navbar flex justify-space-between align-center">
-      <div class="small-logo">
+      <div class="small-logo" id="logo">
         <img src="../assets/small-logo.png" alt="" />
       </div>
       <div class="settings">
@@ -23,16 +22,17 @@
       <div class="box flex column justify-center align-center">
         <div class="first">
           <h3>Your Name</h3>
-          <input type="text" name="" id="" />
+          <input type="text" name="" id="name" required/>
         </div>
         <div class="second">
           <h3>Your Nickname</h3>
-          <input type="text" name="" id="" />
+          <input type="text" name="" id="nickname" required/>
         </div>
         <div class="third">
-          <button class="play">PLAY NOW</button>
+          <button class="play" id="playnow">PLAY NOW</button>
         </div>
       </div>
     </div>
   </body>
-</html>
+  <script src="../javascript/information.js"></script>
+  </html>

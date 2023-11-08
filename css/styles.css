@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+body{
+    background-image: url("../assets/start-instruction-bg.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.settings>img{
+    width: 4vw;
+    position: absolute;
+    top: 2vh;
+    right: 1.5vw;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.logo{
+    height: 50vh;
+
+}
+
+.logo>img{
+    filter: brightness(75%);
+}
+
+.buttons{
+    gap: 3vw;
+}
+
+.border-none{
+    border: none;
+}
+
+.btn-bg{
+    background-color: #edfbe7;
+}
+
+.bold{
+    font-weight: bold;
+}
+.play{
+    border-radius: 10px;
+    width: 90px;
+    height: 36px;
+}
+
+.instructions{
+    border-radius: 10px;
+    width: 150px;
+    height: 36px;
+}
+
+.btn-green{
+    color: #17875ecb;
+}
+.buttons>button>p{
+    font-size: 1rem;
+}
+
+.buttons>button{
+    box-shadow: 0 4px 4px rgba(0,0,0,0.30);
+}
+
+
+@media screen and (max-width: 768px){
+    body{
+        background-size: 100vw 100vh;
+    }
+}
+
+@media screen and (max-width: 430px){
+    body{
+        /* background-size: cover; */
+        background-size: 100vw 100vh;
+    }
+
+    .logo{
+        height: 43vh;
+    }
+
+    .logo>img{
+        filter: brightness(70%);
+    }
+
+    .play{
+        border-radius: 10px;
+        width: 70px;
+        height: 30px;
+    }
+    
+    .instructions{
+        border-radius: 10px;
+        width: 130px;
+        height: 30px;
+    }
+
+    .buttons>button>p{
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    body{
+        background-size: cover;
+        }
+
+    .logo{
+        height: 43vh;
+    }
+
+    .logo>img{
+        filter: brightness(65%);
+    }
+
+    .play{
+        border-radius: 10px;
+        width: 65px;
+        height: 28px;
+    }
+    
+    .instructions{
+        border-radius: 10px;
+        width: 120px;
+        height: 28px;
+    }
+
+    .buttons>button>p{
+        font-size: 0.85rem;
+    }
+}

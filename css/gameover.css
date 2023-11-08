@@ -83,8 +83,20 @@ body {
 svg {
   margin: 2vh;
 }
-
+/* 
 .messagebox {
+  color: #fff;
+  text-align: center;
+  font-family: Kavoon;
+  font-size: 20px;
+  font-weight: 400;
+} */
+
+.messagebox{
+  padding: 0 2vh;
+}
+
+.messagebox>span{
   color: #fff;
   text-align: center;
   font-family: Kavoon;
@@ -121,6 +133,7 @@ svg {
     font-weight: 700;
     line-height: normal;
     padding: 1.4vh;
+    
 }
 
 .golden{

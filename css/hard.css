@@ -1,0 +1,270 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Jolly+Lodger&family=Kavoon&display=swap");
+
+/* Resetting default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting the background color of the entire page to black */
+body {
+  background-color: black;
+}
+
+/* Styling for a background image container with a lower z-index */
+.bg {
+  position: absolute;
+  z-index: -1;
+  opacity: 40%;
+}
+
+/* Styling for the background image within the container */
+.bg > img {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Styling for flex containers */
+.flex {
+  display: flex;
+}
+
+/* Centering content horizontally in a flex container */
+.justify-center {
+  justify-content: center;
+}
+
+/* Creating space between elements in a flex container */
+.justify-space-between {
+  justify-content: space-between;
+}
+
+/* Aligning items vertically in a flex container */
+.align-items {
+  align-items: center;
+}
+
+/* Setting the flex direction to column */
+.column {
+  flex-direction: column;
+}
+
+/* Styling for a small logo image */
+.small-logo > img {
+  width: 6vw;
+  margin: 2vh 0 0 2.5vh;
+}
+
+/* Styling for a settings icon image */
+.settings > img {
+  width: 4vw;
+  margin: 2vh 2.5vh 0 0;
+}
+
+/* Styling for a container with right navigation elements */
+.rightnav {
+  gap: 2rem;
+}
+
+/* Styling for a time input element */
+.time {
+  width: 10vw;
+  align-self: center;
+  color: #05432ccb;
+  text-align: center;
+  font-family: Inter;
+  font-size: 2rem;
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  border-radius: 0.5vw;
+  background: #b5e6d4cb;
+  border: none;
+  font-family: "Jolly Lodger";
+}
+
+/* Styling for the main content container */
+.main {
+  margin: 12vh 0 0 0;
+  width: 100vw;
+  height: 60vh;
+  justify-content: space-evenly;
+}
+
+/* Styling for a grid container */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 480px;
+  width: 480px;
+  gap: 1px;
+}
+
+/* Styling for individual grid tiles */
+.tile {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+/* Styling for the right column container */
+.right {
+  height: 100%;
+}
+
+/* Styling for a hint element */
+.hint {
+  width: 10vw;
+  color: #05432ccb;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.5rem;
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  border-radius: 0.5vw;
+  background: #b5e6d4cb;
+  border: none;
+  padding: 2px;
+  font-family: sans-serif;
+  margin: 2vh 0 5vh 0;
+}
+
+/* Styling for text and images within the right column */
+.right > div > h1 {
+  font-size: 1.3rem;
+  color: rgb(195, 195, 238);
+  margin: 1vh;
+}
+
+.right > div > img {
+  width: 40vh;
+}
+
+/* Styling to hide an element with the class "show" */
+.show {
+  display: none;
+}
+
+/* Styling for a specific paragraph within an element with the ID "previewtimer" */
+#previewtimer > p {
+  font-size: 20px;
+  color: white;
+}
+
+/* Styling for a specific span within the same paragraph */
+#previewtimer > p > span {
+  font-size: 24px;
+  color: white;
+}
+
+/* Media query for screens with a maximum width of 768px */
+
+@media screen and (max-width: 768px){
+
+
+  .small-logo > img {
+    width: 12vh;
+    margin: 2vh 0 0 2.5vh;
+  }
+  .main{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    height: 100vh;
+    margin: 4vh 0 0 0 ;
+
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    height: 100vh;
+    gap: 1px;
+  }
+  .right{
+    width: 100vw;
+    /* height: 100%; */
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .hint{
+    width: 18vw;
+    border-radius: 1vh;
+  }
+  .bg > img {
+    overflow: hidden;
+    /* width: 100%; */
+    height: 100vh;
+  }
+  .time{
+    width: 30vw;
+  }
+  .right>div>img{
+    width: 20vh;
+  }
+  .right>div>h1{
+    font-size: 1.3rem;
+    color: rgb(195, 195, 238);
+    margin: 0;
+    
+  }
+}
+
+
+/* Media query for screens with a maximum width of 431px */
+
+@media screen and (max-width: 431px){
+
+
+  .small-logo > img {
+    width: 12vh;
+    margin: 2vh 0 0 2.5vh;
+  }
+  .main{
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    height: 80vh;
+    margin: 4vh 0 0 0 ;
+
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    height: 100vh;
+    width: 80vw;
+    gap: 1px;
+  }
+  .right{
+    width: 100vw;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .hint{
+    width: 26vw;
+    border-radius: 1vh;
+  }
+  .bg > img {
+    overflow: hidden;
+    /* width: 100%; */
+    height: 100vh;
+  }
+  .time{
+    width: 30vw;
+  }
+  .right>div>img{
+    width: 20vh;
+  }
+  .right>div>h1{
+    font-size: 1.3rem;
+    color: rgb(195, 195, 238);
+    margin: 0;
+    
+  }
+}
