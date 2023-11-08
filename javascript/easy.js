@@ -1,3 +1,21 @@
+// Sounds
+let backgroundSound = new Audio("../sounds/bgSound.mp3");
+backgroundSound.play();
+backgroundSound.loop = true;
+backgroundSound.volume = 0.1;
+
+function clickSound() {
+  let clickSound = new Audio("../sounds/click.mp3");
+  clickSound.play();
+  clickSound.volume = 0.2;
+}
+
+function swipeSound() {
+  let swipeSound = new Audio("../sounds/swipe.mp3");
+  swipeSound.play();
+  swipeSound.volume = 0.5;
+}
+
 // Define a mapping function to return the index based on tile number
 
 // 11 12 13
@@ -79,6 +97,7 @@ function generateAndCheckPuzzle() {
   function shuffleTiles() {
     for (let i = tileElements.length - 2; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
+      console.log(i, j);
 
       let tempBackground = tileElements[i].style.backgroundImage;
       tileElements[i].style.backgroundImage =
@@ -86,9 +105,10 @@ function generateAndCheckPuzzle() {
       tileElements[j].style.backgroundImage = tempBackground;
     }
     let shuffledArrayIndex = makeFlatArray(tileElements);
+    console.log(shuffledArrayIndex);
 
     if (!isSolvable(shuffledArrayIndex)) {
-      alert("Puzzle Not Solvable,pls wait while we shuffle tiles......");
+      alert("Puzzle Not Solvable,please wait while we shuffle tiles......");
       shuffleTiles();
     }
   }
@@ -121,7 +141,9 @@ function generateAndCheckPuzzle() {
       if (adjacentTileIndices.includes(index)) {
         swapTiles(index, emptyTileIndex);
         emptyTileIndex = index;
+        swipeSound()
         adjacentTileIndices = getAdjacentTileIndices(emptyTileIndex);
+        console.log(isPuzzleSolved());
         if (isPuzzleSolved()) {
           alert("Puzzle solved!");
         }
@@ -158,10 +180,11 @@ function generateAndCheckPuzzle() {
     for (let i = 0; i < numTiles - 1; i++) {
       if (
         tileElements[i].style.backgroundImage !==
-        `url(../image1/row-${Math.floor(i / gridSize + 1)}-column-${
+        `url("../image1/row-${Math.floor(i / gridSize + 1)}-column-${
           (i % gridSize) + 1
-        }.png)`
+        }.png")`
       ) {
+        console.log("i: ", i);
         return false;
       }
     }
@@ -170,12 +193,12 @@ function generateAndCheckPuzzle() {
 
   // Additional game functionality and event handling
 
-
   // Onclick logo button , Start-Page will appear
   var logo = document.getElementById("logo");
 
   logo.onclick = () => {
     window.open("../index.html", "_self");
+    clickSound();
   };
 
   // To display the total number of hints left for the user
@@ -194,6 +217,7 @@ function generateAndCheckPuzzle() {
     } else if (isTimerOver) {
       alert("No more hints");
     }
+    clickSound();
   };
 
   // Time in which user has to solve the given grid image puzzle
@@ -220,7 +244,6 @@ function generateAndCheckPuzzle() {
   }
 
   startInterval();
-
 
   // To display Preview as hint for a particular duration.
   let hintTime = document.getElementById("hint-time");

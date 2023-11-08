@@ -1,3 +1,4 @@
+/* Importing the Inter font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
@@ -7,6 +8,7 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Background color set to black to give black shade on the image */
 body {
   background-color: black;
 }
@@ -23,22 +25,27 @@ body {
   height: 100vh;
 }
 
+/* flex */
 .flex {
   display: flex;
 }
 
+/* justify content : center */
 .justify-center {
   justify-content: center;
 }
 
+/* justify-content : space-between */
 .justify-space-between {
   justify-content: space-between;
 }
 
+/* Align-items : Center */
 .align-items {
   align-items: center;
 }
 
+/* flex-direction: column */
 .column {
   flex-direction: column;
 }
@@ -92,4 +99,34 @@ body {
     outline: none;
     background-color: rgba(245, 245, 245, 1);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Applying Media queries to make the page responsive */
+@media screen and (max-width: 430px) {
+  .small-logo > img {
+    width: 12vw;
+    margin: 2vh 0 0 2.5vh;
+  }
+
+  .content {
+    height: 80vh;
+  }
+
+  .box {
+    width: 60vw;
+    height: auto;
+    padding: 1rem;
+    margin: 5vh 5vw;
+  }
+
+  .box > div > input {
+    width: 40vw;
+    height: 5vh;
+    margin: 0.8vh;
+  }
+
+  .play {
+    padding: 1.4vh 2.5vh;
+    font-size: 0.8rem;
+  }
 }

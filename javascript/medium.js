@@ -1,3 +1,21 @@
+// Sounds
+let backgroundSound = new Audio("../sounds/bgSound.mp3");
+backgroundSound.play();
+backgroundSound.loop = true;
+backgroundSound.volume = 0.1;
+
+function clickSound() {
+    let clickSound = new Audio("../sounds/click.mp3");
+    clickSound.play();
+    clickSound.volume = 0.2;
+  }
+
+  function swipeSound() {
+    let swipeSound = new Audio("../sounds/swipe.mp3");
+    swipeSound.play();
+    swipeSound.volume = 0.5;
+  }
+  
 // Define a mapping function to return the index based on tile number
 
 // 11 12 13 14
@@ -134,6 +152,7 @@ function generateAndCheckPuzzle() {
       if (adjacentTileIndices.includes(index)) {
         swapTiles(index, emptyTileIndex);
         emptyTileIndex = index;
+        swipeSound()
         adjacentTileIndices = getAdjacentTileIndices(emptyTileIndex);
         if (isPuzzleSolved()) {
           alert("Puzzle solved!");
@@ -172,9 +191,9 @@ function generateAndCheckPuzzle() {
     for (let i = 0; i < numTiles - 1; i++) {
       if (
         tileElements[i].style.backgroundImage !==
-        `url(../image1/row-${Math.floor(i / gridSize + 1)}-column-${
+        `("url(../image1/row-${Math.floor(i / gridSize + 1)}-column-${
           (i % gridSize) + 1
-        }.png)`
+        }.png")`
       ) {
         return false;
       }
@@ -189,6 +208,7 @@ function generateAndCheckPuzzle() {
 
   logo.onclick = () => {
     window.open("../index.html", "_self");
+    clickSound()
   };
 
   // To display the total number of hints left for the user
@@ -206,6 +226,7 @@ function generateAndCheckPuzzle() {
       hint_no.textContent = `${total_hints}`;
     } else if (isTimerOver) {
       alert("No more hints");
+      clickSound()
     }
   };
 

@@ -1,3 +1,23 @@
+// Sounds
+
+let backgroundSound = new Audio("../sounds/bgSound.mp3");
+backgroundSound.play();
+backgroundSound.loop = true;
+backgroundSound.volume = 0.1;
+
+function clickSound() {
+  let clickSound = new Audio("../sounds/click.mp3");
+  clickSound.play();
+  clickSound.volume = 0.2;
+}
+
+
+function swipeSound() {
+  let swipeSound = new Audio("../sounds/swipe.mp3");
+  swipeSound.play();
+  swipeSound.volume = 0.5;
+}
+
 // Define a mapping function to return the index based on tile number
 
 // 11 12 13 14 15
@@ -155,6 +175,7 @@ let parts = [
     tile.addEventListener("click", () => {
       if (adjacentTileIndices.includes(index)) {
         swapTiles(index, emptyTileIndex);
+        swipeSound()
         emptyTileIndex = index;
         adjacentTileIndices = getAdjacentTileIndices(emptyTileIndex);
         if (isPuzzleSolved()) {
@@ -193,9 +214,9 @@ let parts = [
     for (let i = 0; i < numTiles - 1; i++) {
       if (
         tileElements[i].style.backgroundImage !==
-        `url(../image1/row-${Math.floor(i / gridSize + 1)}-column-${
+        `url("../image1/row-${Math.floor(i / gridSize + 1)}-column-${
           (i % gridSize) + 1
-        }.png)`
+        }.png")`
       ) {
         return false;
       }
@@ -211,6 +232,7 @@ let parts = [
 
   logo.onclick = () => {
     window.open("../index.html", "_self");
+    clickSound()
   };
 
   // To display the total number of hints left for the user
@@ -229,6 +251,7 @@ let parts = [
     } else if (isTimerOver) {
       alert("No more hints");
     }
+    clickSound()
   };
 
   // Time in which user has to solve the given grid image puzzle
