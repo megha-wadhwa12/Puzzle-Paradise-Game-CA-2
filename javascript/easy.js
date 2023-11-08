@@ -7,13 +7,13 @@ backgroundSound.volume = 0.1;
 function clickSound() {
   let clickSound = new Audio("../sounds/click.mp3");
   clickSound.play();
-  clickSound.volume = 0.2;
+  clickSound.volume = 0.6;
 }
 
 function swipeSound() {
   let swipeSound = new Audio("../sounds/swipe.mp3");
   swipeSound.play();
-  swipeSound.volume = 0.5;
+  swipeSound.volume = 0.2;
 }
 
 // Define a mapping function to return the index based on tile number
@@ -52,6 +52,7 @@ function isSolvable(puzzle) {
       }
     }
   }
+  console.log(inversions);
   // Check if the number of inversions is even
   return inversions % 2 === 0;
 }
@@ -116,6 +117,7 @@ function generateAndCheckPuzzle() {
 
   shuffleTiles();
 
+
   // Create a flat array representing the shuffled puzzle
 
   function makeFlatArray(tileElements) {
@@ -146,6 +148,7 @@ function generateAndCheckPuzzle() {
         console.log(isPuzzleSolved());
         if (isPuzzleSolved()) {
           alert("Puzzle solved!");
+          gameOver()
         }
       }
     });

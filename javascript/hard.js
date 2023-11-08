@@ -1,9 +1,9 @@
 // Sounds
 
-let backgroundSound = new Audio("../sounds/bgSound.mp3");
-backgroundSound.play();
-backgroundSound.loop = true;
-backgroundSound.volume = 0.1;
+// let backgroundSound = new Audio("../sounds/bgSound.mp3");
+// backgroundSound.play();
+// backgroundSound.loop = true;
+// backgroundSound.volume = 0.1;
 
 function clickSound() {
   let clickSound = new Audio("../sounds/click.mp3");
@@ -259,11 +259,11 @@ let parts = [
   let time;
   let timer_box = document.getElementById("timer");
   let interval;
-  var score = 600;
-  timer_box.textContent = 600;
+  var score = 100;
+  timer_box.textContent = 100;
 
   function startInterval() {
-    time = 600;
+    time = 100;
     interval = setInterval(() => {
       timer_box.textContent = time;
       time--;
